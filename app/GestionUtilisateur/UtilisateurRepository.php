@@ -7,6 +7,7 @@ use RacineCRUD\GestionUtilisateur\UtilisateurRepositoryInterface;
 
 /**
  * @author PapiHack
+ * 
  * Classe permettant de gérer un utilisateur (Pattern Repository)
  */
 class UtilisateurRepository implements UtilisateurRepositoryInterface
