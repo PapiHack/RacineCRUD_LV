@@ -27,42 +27,42 @@
                         {{ csrf_field() }}
                     <div class="form-group">
                         <label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom" class="form-control"/>
+                        <input type="text" name="nom" id="nom" value="{{ old('nom') }}" class="form-control"/>
                         @if ($errors->has('nom'))
                             <p style="color: red;"> {{ $errors->first('nom') }} </p>
                         @endif
                     </div>
                     <div class="form-group">
                         <label for="prenom">Prenom</label>
-                        <input type="text" name="prenom" id="prenom" class="form-control"/>
+                        <input type="text" name="prenom" id="prenom" value="{{ old('prenom') }}" class="form-control"/>
                         @if ($errors->has('prenom'))
                             <p style="color: red;"> {{ $errors->first('prenom') }} </p>
                         @endif
                     </div>
                     <div class="form-group">
                         <label for="email">Adresse email</label>
-                        <input type="email" name="email" id="email" class="form-control"/>
+                        <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control"/>
                         @if ($errors->has('email'))
                             <p style="color: red;"> {{ $errors->first('email') }} </p>
                         @endif
                     </div>
                     <div class="form-group">
                         <label for="tel">Telephone</label>
-                        <input type="text" name="tel" id="tel" class="form-control"/>
+                        <input type="text" name="tel" id="tel" value="{{ old('tel') }}" class="form-control"/>
                         @if ($errors->has('tel'))
                             <p style="color: red;"> {{ $errors->first('tel') }} </p>
                         @endif
                     </div>
                     <div class="form-group">
                         <label for="password">Mot de passe</label>
-                        <input type="password" name="password" id="password" class="form-control"/>
+                        <input type="password" name="password" id="password" value="{{ old('password') }}" class="form-control"/>
                         @if ($errors->has('password'))
                             <p style="color: red;"> {{ $errors->first('password') }} </p>
                         @endif
                     </div>
                     <div class="form-group">
                         <label for="password_confirmation">Confirmer mot de passe</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control"/>
+                        <input type="password" value="{{ old('password_confirmation') }}" name="password_confirmation" id="password_confirmation" class="form-control"/>
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-success" value="Ajouter"/>
